@@ -1,36 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
-    [SerializeField] float forwardsSpeed = 30f;
+    // player
+    [SerializeField] float forwardsSpeed = 10f;
     private Rigidbody2D rb;
 
-    [SerializeField] public int score = 0;
+    // score
+    [SerializeField] public int score = 0; // actual score
+    float scoreAcc = 0f; // temp counter that keeps track of how much distance the player has moved
+    public TextMeshProUGUI scoreText;
     [SerializeField] public int health = 1;
 
-    //camera
-    [SerializeField] Camera cam;
+    // bullet
+    [SerializeField] GameObject mintPrefab;
+    [SerializeField] Transform openMouth;
+    [SerializeField] float fireRate = 0.25f;
+    float nextFireTime = 0f;
+    [SerializeField] Animator animator;
 
-    //score
-    float scoreAcc = 0;
+    // camera
+    [SerializeField] Camera cam;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
+    
     void Update()
     {
         // move player forward
         transform.Translate(forwardsSpeed * Time.deltaTime, 0, 0);
 
-        if(Input.GetKey(KeyCode.Space)) // Spacebar
+        if(Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime) // Spacebar
         {
-            // use mint
-           
+            Shoot();
+            nextFireTime = Time.time + fireRate;
+            Debug.Log("space key was pressed");
         }
         
         // move camera
@@ -43,6 +54,7 @@ public class Player : MonoBehaviour
         {
             scoreAcc = 0f;
             score += 1;
+            scoreText.text = "Score: " + score;
         }
     }
 
@@ -64,5 +76,15 @@ public class Player : MonoBehaviour
                 Debug.Log("Died"); //TODO: call end of game
             }
         }
+    }
+
+    // double check this code
+    void Shoot()
+    {
+        // spawn bullet
+        Instantiate(mintPrefab, openMouth.position, Quaternion.identity);
+
+        // shoot animation
+        animator.SetTrigger("Shoot");
     }
 }
