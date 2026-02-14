@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e71c6dadc272e054c8fa44e5e81e6cf8
+guid: cca2e5524221b83409a62ec23d68ba4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6327312663574043453
-    second: Nokkomo_0
+      213: -8624616599934999286
+    second: mouth_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nokkomo_0
+      name: mouth_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 17
+        y: 19
+        width: 202
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c4a6d0f7aed038a0800000000000000
-      internalID: -6327312663574043453
+      spriteID: a05efe4c5e43f4880800000000000000
+      internalID: -8624616599934999286
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Nokkomo_0: -6327312663574043453
+      mouth_0: -8624616599934999286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

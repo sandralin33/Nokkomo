@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: penguin
+  m_Name: shoot
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,21 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6394888585581640024, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - time: 0.1
-      value: {fileID: 2400207654850816759, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - time: 0.2
-      value: {fileID: -7761143411921036472, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - time: 0.3
-      value: {fileID: -973357667964297266, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - time: 0.4
-      value: {fileID: -5621628623452828234, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
+      value: {fileID: 21300000, guid: cca2e5524221b83409a62ec23d68ba4b, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 10
+  m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -52,17 +44,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -6394888585581640024, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - {fileID: 2400207654850816759, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - {fileID: -7761143411921036472, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - {fileID: -973357667964297266, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
-    - {fileID: -5621628623452828234, guid: 4005194cde4ad1243a1d205eb79f9d69, type: 3}
+    - {fileID: 21300000, guid: cca2e5524221b83409a62ec23d68ba4b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
