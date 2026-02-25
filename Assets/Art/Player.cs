@@ -1,90 +1,113 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    // player
-    [SerializeField] float forwardsSpeed = 10f;
+    [Header("Movement")]
+    [SerializeField] private float jumpForce = 12f; // jump strength
     private Rigidbody2D rb;
+    private bool isGrounded = false;
 
-    // score
-    [SerializeField] public int score = 0; // actual score
-    float scoreAcc = 0f; // temp counter that keeps track of how much distance the player has moved
-    public TextMeshProUGUI scoreText;
-    [SerializeField] public int health = 1;
+    [Header("Score")]
+    public int score = 0; // score counter
+    [SerializeField] private TextMeshProUGUI scoreText; // UI text
+    private float scoreAcc = 0f;
 
-    // bullet
-    [SerializeField] GameObject mintPrefab;
-    [SerializeField] Transform openMouth;
-    [SerializeField] float fireRate = 0.25f;
-    float nextFireTime = 0f;
-    [SerializeField] Animator animator;
+    [Header("Shooting")]
+    [SerializeField] private GameObject mintPrefab; // projectile prefab
+    [SerializeField] private Transform openMouth; // spawn point
+    [SerializeField] private float fireRate = 0.25f; // delay between shots
+    private float nextFireTime = 0f;
+    [SerializeField] private Animator animator; // for shooting animation
 
-    // camera
-    [SerializeField] Camera cam;
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI gameOverText; // game over UI
+
+    private bool isDead = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
+        // hide game over text at start
+        if (gameOverText != null)
+            gameOverText.gameObject.SetActive(false);
     }
-    
+
     void Update()
     {
-        // move player forward
-        transform.Translate(forwardsSpeed * Time.deltaTime, 0, 0);
+        if (isDead) return;
 
-        if(Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime) // Spacebar
+        // jump input
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            Jump();
+
+        // shoot input
+        if (Input.GetKey(KeyCode.F) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
-            Debug.Log("space key was pressed");
         }
-        
-        // move camera
-        cam.transform.Translate(forwardsSpeed * Time.deltaTime, 0, 0);
 
-
-        // score increases with distance
-        scoreAcc += forwardsSpeed * Time.deltaTime;
-        if(scoreAcc >= 1f)
+        // score
+        scoreAcc += Time.deltaTime * 5f;
+        while (scoreAcc >= 1f)
         {
-            scoreAcc = 0f;
-            score += 1;
+            scoreAcc -= 1f;
+            score++;
+        }
+
+        if (scoreText != null)
             scoreText.text = "Score: " + score;
-        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Jump()
     {
-        // if(collision.compareTag == "Coin")
-        // {
-        //     Debug.Log("Collected");
-        //     score += 1000;
-        //     Destroy(collision.gameObject);
-        // }
-
-        if (collision.tag == "Enemy")
-        {
-            Debug.Log("Dry Mouth");
-            health -= 1;
-            if(health <= 0)
-            {
-                Debug.Log("Died"); //TODO: call end of game
-            }
-        }
+        isGrounded = false;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // reset Y velocity
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
-    // double check this code
     void Shoot()
     {
-        // spawn bullet
-        Instantiate(mintPrefab, openMouth.position, Quaternion.identity);
+        // spawn projectile
+        if (mintPrefab != null && openMouth != null)
+            Instantiate(mintPrefab, openMouth.position, Quaternion.identity);
 
-        // shoot animation
-        animator.SetTrigger("Shoot");
+        // play shooting animation
+        if (animator != null)
+            animator.SetTrigger("Shoot");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // check if player lands on ground
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = true;
+
+        // check if player hits enemy
+        if (collision.gameObject.CompareTag("Enemy"))
+            Die();
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // player leaves ground
+        if (collision.gameObject.CompareTag("Ground"))
+            isGrounded = false;
+    }
+
+    void Die()
+    {
+        isDead = true;
+        rb.linearVelocity = Vector2.zero;
+
+        // show game over text
+        if (gameOverText != null)
+            gameOverText.gameObject.SetActive(true);
+
+        Debug.Log("PLAYER DIED");
     }
 }

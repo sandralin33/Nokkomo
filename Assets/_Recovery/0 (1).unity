@@ -888,6 +888,7 @@ GameObject:
   - component: {fileID: 724285493}
   - component: {fileID: 724285492}
   - component: {fileID: 724285488}
+  - component: {fileID: 724285487}
   - component: {fileID: 724285491}
   m_Layer: 0
   m_Name: Player
@@ -896,6 +897,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!111 &724285487
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724285486}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 7b9684daf5cf91343a0da1656ad2261b, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!95 &724285488
 Animator:
   serializedVersion: 7
@@ -1012,6 +1029,7 @@ MonoBehaviour:
   mintPrefab: {fileID: 7534846715001274399, guid: 1449c7f164f70b2429436ab6b656a8e3, type: 3}
   openMouth: {fileID: 1513303644}
   fireRate: 0.25
+  animator: {fileID: 724285488}
   gameOverText: {fileID: 415692541}
 --- !u!61 &724285492
 BoxCollider2D:
@@ -1074,7 +1092,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

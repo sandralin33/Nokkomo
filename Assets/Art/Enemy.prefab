@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5268053472405477249}
   - component: {fileID: 2700532714351498737}
   - component: {fileID: -6785520613184635251}
-  - component: {fileID: 577398461978194183}
+  - component: {fileID: 415778831525605130}
   m_Layer: 0
-  m_Name: Mint 1
-  m_TagString: Mint
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8733919318300927530, guid: 60dcc2bead39cd4408e782515ccc59b1, type: 3}
+  m_Sprite: {fileID: -2622241236193566542, guid: 60dcc2bead39cd4408e782515ccc59b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,15 +159,15 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.41, y: 0.24}
+    oldSize: {x: 1.48, y: 1.64}
     newSize: {x: 0.41, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.41, y: 0.24}
+  m_Size: {x: 1.48, y: 1.64}
   m_EdgeRadius: 0
---- !u!114 &577398461978194183
+--- !u!114 &415778831525605130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,15 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7534846715001274399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316c3dd71408372409d8f44e9b0ac3e0, type: 3}
+  m_Script: {fileID: 11500000, guid: b1b393fec46759f4fbed4bde875ae608, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  speed: 20
-  life: 3
-  wordSprites:
-  - {fileID: 5468275346343796690, guid: e6950d6239b901c499a434fb33b225a0, type: 3}
-  - {fileID: 4258081263921899527, guid: e6950d6239b901c499a434fb33b225a0, type: 3}
-  - {fileID: -6686358444854819152, guid: e6950d6239b901c499a434fb33b225a0, type: 3}
-  - {fileID: 8966077861573107906, guid: e6950d6239b901c499a434fb33b225a0, type: 3}
-  - {fileID: 5942247198578474322, guid: e6950d6239b901c499a434fb33b225a0, type: 3}
-  - {fileID: -8733919318300927530, guid: 60dcc2bead39cd4408e782515ccc59b1, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  moveSpeed: 5
