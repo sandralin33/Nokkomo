@@ -986,8 +986,8 @@ Transform:
   m_GameObject: {fileID: 724285486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7, y: -2, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1513303644}
@@ -1006,12 +1006,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   jumpForce: 12
-  groundY: -1
   score: 0
   scoreText: {fileID: 324691158}
   mintPrefab: {fileID: 7534846715001274399, guid: 1449c7f164f70b2429436ab6b656a8e3, type: 3}
   openMouth: {fileID: 1513303644}
   fireRate: 0.25
+  animator: {fileID: 0}
   gameOverText: {fileID: 415692541}
 --- !u!61 &724285492
 BoxCollider2D:
