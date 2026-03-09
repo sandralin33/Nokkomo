@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: 065ddca98478eed42a8c1e436a3fc08e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 790561398894457574
+    second: penguin 1_0
+  - first:
+      213: -6410419213884535913
+    second: penguin 1_1
+  - first:
+      213: -1333468266528823650
+    second: penguin 1_2
+  - first:
+      213: 3981000851652778352
+    second: penguin 1_3
+  - first:
+      213: -947676208852853372
+    second: penguin 1_4
+  - first:
+      213: 8143365701409667327
+    second: penguin 1_5
+  - first:
+      213: 9006724692893472327
+    second: penguin 1_6
+  - first:
+      213: -8693920419943811761
+    second: penguin 1_7
+  - first:
+      213: -4608243377514220857
+    second: penguin 1_8
+  - first:
+      213: -246053157717257144
+    second: penguin 1_9
+  - first:
+      213: 2489266370971722510
+    second: penguin 1_10
+  - first:
+      213: -8708024148215789989
+    second: penguin 1_11
+  - first:
+      213: -3303728190074796959
+    second: penguin 1_12
+  - first:
+      213: 5764171620733838658
+    second: penguin 1_13
+  - first:
+      213: 4508438664232043954
+    second: penguin 1_14
+  - first:
+      213: 7633097519888642214
+    second: penguin 1_15
+  - first:
+      213: -5436062616512414994
+    second: penguin 1_16
+  - first:
+      213: -7516297688760312774
+    second: penguin 1_17
+  - first:
+      213: 88241222171407104
+    second: penguin 1_18
+  - first:
+      213: 6174457059697852251
+    second: penguin 1_19
+  - first:
+      213: -7370906592629487216
+    second: penguin 1_20
+  - first:
+      213: -9153558772979946273
+    second: penguin 1_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: item
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 57
+        width: 77
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e27d3a5763a8fa00800000000000000
+      internalID: 790561398894457574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item(1)
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 57
+        width: 92
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bc21750bd9907a0800000000000000
+      internalID: -6410419213884535913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item4
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 54
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2f7bc401b3c00c0800000000000000
+      internalID: -4608243377514220857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: penguin 1_17
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 59
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c1a5b331fb0b790800000000000000
+      internalID: -7516297688760312774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item (2)
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 57
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d603a140646011c41a71a38caf2c51f4
+      internalID: 1811465280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5299114bb38d3de4489374e811ae201a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      item: 790561398894457574
+      item (2): 1811465280
+      item(1): -6410419213884535913
+      item4: -4608243377514220857
+      penguin 1_10: 2489266370971722510
+      penguin 1_11: -8708024148215789989
+      penguin 1_12: -3303728190074796959
+      penguin 1_13: 5764171620733838658
+      penguin 1_14: 4508438664232043954
+      penguin 1_15: 7633097519888642214
+      penguin 1_16: -5436062616512414994
+      penguin 1_17: -7516297688760312774
+      penguin 1_18: 88241222171407104
+      penguin 1_19: 6174457059697852251
+      penguin 1_2: -1333468266528823650
+      penguin 1_20: -7370906592629487216
+      penguin 1_21: -9153558772979946273
+      penguin 1_3: 3981000851652778352
+      penguin 1_4: -947676208852853372
+      penguin 1_5: 8143365701409667327
+      penguin 1_6: 9006724692893472327
+      penguin 1_7: -8693920419943811761
+      penguin 1_9: -246053157717257144
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
