@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mint
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX

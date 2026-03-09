@@ -14,10 +14,10 @@ public class Parallax : MonoBehaviour
 
     void Update()
     {
-        // Move background left
+        // move background left
         transform.Translate(Vector2.left * scrollSpeed * Time.deltaTime);
 
-        // Loop background
+        // loop background
         if (transform.position.x <= startPos.x - length)
         {
             transform.position = new Vector3(transform.position.x + length * 2f, transform.position.y, transform.position.z);

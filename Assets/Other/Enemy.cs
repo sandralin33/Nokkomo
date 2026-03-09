@@ -6,10 +6,10 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        // Move left
+        // move left
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
-        // Destroy if off-screen
+        // destroy if off-screen
         if(transform.position.x < -20f) // adjust to camera view
         {
             Destroy(gameObject);
